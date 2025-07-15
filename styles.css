@@ -1,0 +1,224 @@
+* {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    line-height: 95%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mist-one, .mist-two, .mist-four {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 40%, transparent 100%);
+    filter: blur(40px);
+}
+
+.mist-one {
+    z-index: 4;
+}
+
+.mist-two {
+    z-index: 3;
+}
+
+.mist-three {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 40%, transparent 100%);
+    filter: blur(40px);
+    z-index: 6;
+}
+
+.mist-four {
+    background: radial-gradient(circle, rgba(70, 131, 102, 0.25) 10%, transparent 100%);
+    filter: blur(10px);
+    z-index: 6;
+}
+
+/* You can define multiple mist backgrounds by card ID */
+.mist-house {
+    background: radial-gradient(circle, rgba(70, 131, 102, 0.35) 10%, transparent 100%);
+  }
+  .mist-island {
+    background: radial-gradient(circle, rgba(55, 88, 140, 0.35) 10%, transparent 100%);
+  }
+  .mist-desert {
+    background: radial-gradient(circle, rgba(180, 120, 60, 0.35) 10%, transparent 100%);
+  }
+  .mist-fjord {
+    background: radial-gradient(circle, rgba(100, 80, 150, 0.35) 10%, transparent 100%);
+  }
+  
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30rem;
+    width: 20rem;
+    background-color: black;
+    border-radius: 2rem;
+    gap: 1rem;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+}
+
+.card-top > .icon:nth-child(2) {
+    rotate: 135deg;
+}
+
+.one {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.two {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-12.5deg);
+    z-index: 3;
+}
+
+.three {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    z-index: 2;
+}
+
+.four {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, 0) rotate(12.5deg);
+}
+
+.z-1 {
+    z-index: 1 !important;
+}
+
+.z-5 {
+    z-index: 5 !important;
+}
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.card-center {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.card-center > p {
+    background-color: black;
+    color: white;
+    font-size: .7rem;
+    position: absolute;
+    bottom: .75rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: .4rem .6rem;
+    border-radius: 999px;
+}
+
+.card-bottom {
+    color: white;
+    font-size: .6rem;
+    width: 70%;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    padding: .25rem;
+    z-index: 7;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button > img {
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    left: 10%;
+}
+
+.right {
+    right: 10%;
+}
+
+#card-one > .card-center {
+    width: calc(100% - 1rem);
+    height: 50%;
+    background-image: url("./assets/island.jpg");
+}
+
+#card-two > .card-center {
+    width: calc(100% - 1rem);
+    height: 50%;
+    background-image: url("./assets/fjord.jpg");
+}
+
+#card-three > .card-center {
+    width: calc(100% - 1rem);
+    height: 50%;
+    background-image: url("./assets/desert.jpg");
+}
+
+#card-four > .card-center {
+    width: calc(100% - 1rem);
+    height: 50%;
+    background-image: url("./assets/fancy-house.jpg");
+}
